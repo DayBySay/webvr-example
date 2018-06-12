@@ -4,14 +4,19 @@ require('./shader.js')
 
 function main() {
     setTimeout(() => {
-        setEquirectangularImage("img2.jpg")
-    }, 1000)
+        var sky = document.querySelector('a-sky')
+        sky.emit('fadeOut')
+    }, 3000)
+    setTimeout(() => {
+        changeSky("img2.jpg")
+        var sky = document.querySelector('a-sky')
+        sky.emit('fadeIn')
+    }, 5000)
 }
 
-function setEquirectangularImage(imgName) {
+function changeSky(imgName) {
     var sky = document.querySelector('a-sky')
-    // sky.setAttribute('material', 'src', imgName)
-    sky.emit('fadeOut')
+    sky.setAttribute('material', 'src', imgName)
 }
 
 document.addEventListener('DOMContentLoaded', function () {

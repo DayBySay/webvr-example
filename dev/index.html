@@ -14,20 +14,10 @@
             <img id="room1" src="img1.jpg">
             <img id="room2" src="img2.jpg">
         </a-assets>
-        <!-- <a&#45;sky src="#room1" -->
-        <a-sky>
-            <a-animation attribute="color" from="#fff" to="#000" dur="100"></a-animation>
-            <!-- <a&#45;animation startEvents="fadeOut" attribute="color" from="#fff" to="#000" dur="100"></a&#45;animation> -->
-            <!-- <a&#45;animation startEvents="fadeIn" attribute="color" from="#000" to="#fff" dur="500"></a&#45;animation> -->
+        <a-sky src="#room1"
+            <a-animation begin="fadeOut" attribute="color" from="#fff" to="#000" dur="1000"></a-animation>
+            <a-animation begin="fadeIn" attribute="color" from="#000" to="#fff" dur="1000"></a-animation>
         </a-sky>
-        <a-cylinder position="1 0.75 -3" id="piston" color="#F55" radius="0.1">
-            <a-animation attribute="color" from="#fff" to="#000" dur="5000"></a-animation>
-            <a-animation attribute="rotation"
-                         dur="1000"
-                         fill="foward"
-                         to="50 60 360"
-                         repeat="indefinite"></a-animation>
-        </a-cylinder>
     </a-scene>
 </body>
 
