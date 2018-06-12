@@ -2,7 +2,8 @@
 
 <head>
     <title>nowhere</title>
-    <script src="./build.js"></script>
+    <!-- <script src="./build.js"></script> -->
+        <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="./app.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -10,11 +11,23 @@
 <body>
     <a-scene vr-mode-ui="enabled: false">
         <a-assets>
-            <img id="room1" src="img1.jpeg">
-            <img id="room2" src="img2.jpeg">
+            <img id="room1" src="img1.jpg">
+            <img id="room2" src="img2.jpg">
         </a-assets>
-        <a-sky src="#room1">
+        <!-- <a&#45;sky src="#room1" -->
+        <a-sky>
+            <a-animation attribute="color" from="#fff" to="#000" dur="100"></a-animation>
+            <!-- <a&#45;animation startEvents="fadeOut" attribute="color" from="#fff" to="#000" dur="100"></a&#45;animation> -->
+            <!-- <a&#45;animation startEvents="fadeIn" attribute="color" from="#000" to="#fff" dur="500"></a&#45;animation> -->
         </a-sky>
+        <a-cylinder position="1 0.75 -3" id="piston" color="#F55" radius="0.1">
+            <a-animation attribute="color" from="#fff" to="#000" dur="5000"></a-animation>
+            <a-animation attribute="rotation"
+                         dur="1000"
+                         fill="foward"
+                         to="50 60 360"
+                         repeat="indefinite"></a-animation>
+        </a-cylinder>
     </a-scene>
 </body>
 
