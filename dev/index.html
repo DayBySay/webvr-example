@@ -1,24 +1,27 @@
 <html>
-
 <head>
     <title>nowhere</title>
     <!-- <script src="./build.js"></script> -->
         <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="./app.js"></script>
+    <!-- <style type="text/css" data&#45;href="./css/style.css"></style> -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-    <a-scene vr-mode-ui="enabled: false">
-        <a-assets>
-            <img id="room1" src="img1.jpg">
-            <img id="room2" src="img2.jpg">
-        </a-assets>
-        <a-sky src="#room1"
-            <a-animation begin="fadeOut" attribute="color" from="#fff" to="#000" dur="1000"></a-animation>
-            <a-animation begin="fadeIn" attribute="color" from="#000" to="#fff" dur="1000"></a-animation>
-        </a-sky>
-    </a-scene>
+    <div class="imageWrapper">
+        <a-scene vr-mode-ui="enabled: false">
+            <a-assets>
+                <img id="room1" src="img1.jpg">
+                <img id="room2" src="img2.jpg">
+            </a-assets>
+            <a-sky src="#room1"
+                <a-animation begin="fadeOut" attribute="color" from="#fff" to="#000" dur="1000"></a-animation>
+                <a-animation begin="fadeIn" attribute="color" from="#000" to="#fff" dur="1000"></a-animation>
+            </a-sky>
+        </a-scene>
+        <div class="overlayImageContainer">
+            <img class="overlayImage" src="./madori.jpg">
+        </div>
+    </div>
 </body>
-
 </html>
