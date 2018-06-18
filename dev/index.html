@@ -2,10 +2,9 @@
 <head>
     <title>nowhere</title>
     <!-- <script src="./build.js"></script> -->
-        <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-    <script src="./app.js"></script>
-    <!-- <style type="text/css" data&#45;href="./css/style.css"></style> -->
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./app.js"></script>
 </head>
 <body>
     <div class="imageWrapper">
@@ -15,12 +14,17 @@
                 <img id="room2" src="img2.jpg">
             </a-assets>
             <a-sky src="#room1"
-                <a-animation begin="fadeOut" attribute="color" from="#fff" to="#000" dur="1000"></a-animation>
+                <a-animation begin="dummy"></a-animation>
                 <a-animation begin="fadeIn" attribute="color" from="#000" to="#fff" dur="1000"></a-animation>
+                <a-animation begin="fadeOut" attribute="color" from="#fff" to="#000" dur="1000"></a-animation>
             </a-sky>
         </a-scene>
         <div class="overlayImageContainer">
             <img class="overlayImage" src="./madori.jpg">
+                <div class="overlayImageContainer">
+                    <img id="camera1" src="./camera.jpg">
+                    <img id="camera2" src="./camera.jpg">
+                </div>
         </div>
     </div>
 </body>

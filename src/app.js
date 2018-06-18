@@ -3,15 +3,27 @@ require('./component.js')
 require('./shader.js')
 
 function main() {
+    document.getElementById('camera1').addEventListener('click', handleClick1, false)
+    document.getElementById('camera2').addEventListener('click', handleClick2, false)
+    console.log(document.getElementById('camera1'))
+}
+
+function handleClick1(evt) {
+    var sky = document.querySelector('a-sky')
+    sky.emit('fadeOut')
     setTimeout(() => {
-        var sky = document.querySelector('a-sky')
-        sky.emit('fadeOut')
-    }, 3000)
+        changeSky("img1.jpg")
+        sky.emit('fadeIn')
+    }, 1000)
+}
+
+function handleClick2(evt) {
+    var sky = document.querySelector('a-sky')
+    sky.emit('fadeOut')
     setTimeout(() => {
         changeSky("img2.jpg")
-        var sky = document.querySelector('a-sky')
         sky.emit('fadeIn')
-    }, 5000)
+    }, 1000)
 }
 
 function changeSky(imgName) {
