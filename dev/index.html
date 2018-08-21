@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <title>nowhere</title>
     <!-- <script src="./build.js"></script> -->
@@ -6,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="./app.js"></script>
 </head>
+
 <body>
     <div class="imageWrapper">
         <a-scene vr-mode-ui="enabled: false">
@@ -13,19 +15,20 @@
                 <img id="room1" src="img1.jpg">
                 <img id="room2" src="img2.jpg">
             </a-assets>
-            <a-sky src="#room1"
-                <a-animation begin="dummy"></a-animation>
+            <a-sky src="#room1" <a-animation begin="dummy"></a-animation>
                 <a-animation begin="fadeIn" attribute="color" from="#000" to="#fff" dur="1000"></a-animation>
                 <a-animation begin="fadeOut" attribute="color" from="#fff" to="#000" dur="1000"></a-animation>
             </a-sky>
         </a-scene>
         <div class="overlayImageContainer">
             <img class="overlayImage" src="./madori.jpg">
-                <div class="overlayImageContainer">
-                    <img id="camera1" src="./camera.jpg">
-                    <img id="camera2" src="./camera.jpg">
-                </div>
+            <div class="overlayImageContainer">
+                <input type="file" name="file" id="ip" multiple accept="image/*">
+                <img id="camera1" src="./camera.jpg">
+                <img id="camera2" src="./camera.jpg">
+            </div>
         </div>
     </div>
 </body>
+
 </html>
